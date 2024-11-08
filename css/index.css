@@ -1,0 +1,910 @@
+/* Ajuste para imagem de background responsiva */
+body {
+    font-family: 'Bree Serif';
+    margin: 0;
+    padding: 0;
+   /*  background-image: url('../img/atualizadas/fundoescuro.png');*/
+    background-color: white;
+    background-size: cover; /* Garante que a imagem cubra todo o espaço */
+    background-position: center center; /* Centraliza o background */
+    background-attachment: fixed; /* Faz com que o background não se mova com o scroll */
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    body {
+        background-size: contain; /* Em telas menores, ajusta a imagem para caber */
+        background-attachment: scroll; /* O background pode rolar junto com a página em dispositivos móveis */
+    }
+}
+
+
+@font-face {
+    font-family: 'Bree Serif';
+    src: url('fonte/BreeSerif-Regular.ttf') format('woff2'), /* Formato WOFF2 */
+         url('fonte/BreeSerif-Regular.ttf') format('woff'); /* Formato WOFF */
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+p {
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    float: left;
+    width: 80%;
+   
+}
+
+.container {
+    max-width: 1200px; /* Largura máxima do container */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 15px; /* Adiciona padding lateral */
+    padding-bottom: 100px;
+    padding-top: 0px;
+    width: 100%;
+
+}
+
+
+
+
+
+
+
+.site-header {
+    background-color: #3a9ee4 ; /* Cor de fundo */
+    color: #000000; /* Cor do texto */
+    padding: 10px 0; /* Espaçamento interno */
+    text-align: center; /* Alinhamento do re */
+    /* position: fixed; */
+    top: 0; /* Alinha o cabeçalho ao topo da tela */
+    width: 100%; /* Garante que o cabeçalho tenha a largura total da tela */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+
+
+
+    background-color: #3a9ee4; /* Cor de fundo do cabeçalho */
+    padding: 10px 20px; /* Padding para o cabeçalho */
+    display: flex; /* Flexbox para alinhamento */
+    align-items: center; /* Alinha verticalmente os itens */
+
+}
+
+.containerheader {
+    display: flex; /* Layout flexível para os elementos dentro do cabeçalho */
+    align-items: center; /* Centraliza verticalmente os itens */
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    padding: 0 20px; /* Espaçamento interno nas laterais */
+    /*  */
+}
+
+.minilogolink {
+    display: inline-block; /* Transforma o link em um bloco inline */
+    text-decoration: none; /* Remove sublinhado do link */
+    margin-right: 20px;
+    margin-bottom: 7px;
+}
+
+.minilogo {
+    width: 60px; /* Tamanho da imagem do logo */
+    height: auto; /* Altura automática */
+    vertical-align: middle; /* Alinha verticalmente ao centro */
+    border-radius: 10px;
+    
+}
+
+h1 a.botaohome {
+    margin: 0; /* Remove margem padrão do título */
+    margin-right: 20px;
+    
+    
+}
+
+.botaohome {
+    color: #000000; /* Cor do link */
+    text-decoration: none; /* Remove sublinhado do link */
+    margin-right: 200px;
+    margin-left: -100px;
+    
+}
+
+.botaohome:hover {
+    text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+.site-header a {
+    color: #000000; /* Cor padrão dos links no cabeçalho */
+    text-decoration: none; /* Remove sublinhado padrão */
+    margin-left: 20px; /* Espaçamento entre os links */
+    font-size: 55px; /* Tamanho da fonte dos links */
+    transition: color 0.3s; /* Transição suave para a cor */
+}
+
+.site-header a:hover {
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+
+.heart-icon {
+    color: #f06a7a; /* Cor vermelha para o coração */
+    font-size: 40px; /* Tamanho do ícone */
+    transition: color 0.3s ease; /* Efeito de transição suave para mudança de cor */
+    cursor: pointer; /* Altera o cursor para indicar interatividade */
+    margin-left: 20px;
+}
+
+/* Efeito hover */
+.heart-icon:hover {
+    color: pink; /* Altera a cor para rosa ao passar o mouse */
+}
+
+
+
+
+
+
+.links-header {
+    margin-left: auto; /* Empurra os links para a direita */
+    padding: 10px; /* Espaçamento interno */
+    display: flex; /* Ativa o flexbox */
+}
+
+.links-header ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0; /* Remove o padding padrão */
+    display: flex; /* Exibe os itens da lista em linha */
+}
+
+.links-header li {
+    margin: 0 15px; /* Espaçamento lateral entre os itens */
+}
+
+.links-header a {
+    text-decoration: none; /* Remove o sublinhado */
+    color:black; /* Cor do texto dos links */
+    font-size: 18px; /* Tamanho da fonte dos links */
+    transition: color 0.3s, text-decoration 0.3s; /* Transições suaves */
+}
+
+.links-header a:hover {
+    color: white; /* Cor ao passar o mouse */
+    text-decoration: underline; /* Sublinha ao passar o mouse */
+}
+
+.links-header a:focus {
+    outline: 2px solid #007bff; /* Estilo de foco */
+    outline-offset: 2px; /* Distância do foco */
+}
+
+
+
+/* animação de cada sessão aparecendo */
+.home-section, .resumo, .blocks-section, .faq-section, .baixe-section, .objetivo {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Move para baixo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animação suave */
+}
+
+.home-section.visible, .resumo.visible, .blocks-section.visible, .faq-section.visible, .baixe-section.visible, .objetivo.visible {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+
+
+
+/* Estilo da seção */
+.home-section {
+    padding: 0;
+    margin-top: 10px;
+    opacity: 0; /* Começa invisível */
+    transform: translateY(20px); /* Move para baixo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Animação suave */
+}
+
+.home-section.visible {
+    opacity: 1; /* Fica visível */
+    transform: translateY(0); /* Retorna à posição original */
+}
+
+/* Estilo da linha de texto e imagem */
+.text-image-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 120px 0; /* Padding superior e inferior */
+}
+
+/* Estilo da coluna de texto */
+.text-column {
+    flex: 1;
+    padding: 40px; /* Padding interno */
+    margin: 0;
+    max-width: 600px; /* Largura máxima da coluna de texto */
+}
+
+/* Estilo do título */
+.text-column h2 {
+    font-size: 48px; /* Tamanho da fonte do título */
+    margin-bottom: 30px; /* Espaço abaixo do título */
+    
+}
+
+/* Estilo do parágrafo */
+.text-column p {
+    font-size: 20px; /* Tamanho da fonte do parágrafo */
+    line-height: 1.8; /* Espaçamento entre linhas */
+    margin-bottom: 30px; /* Espaço abaixo do parágrafo */
+}
+
+/* Estilo da coluna de botão */
+.button-column {
+    margin-top: 30px; /* Espaço acima do botão */
+    margin-left: 100px;
+    
+}
+
+/* Estilo do botão */
+.botaoapp {
+    background: #3a9ee4; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte do botão */
+    text-align: center;
+    border-radius: 50px; /* Borda arredondada */
+    text-decoration: none;
+    padding: 15px 30px; /* Padding interno do botão */
+    cursor: pointer;
+    display: inline-block; /* Ajusta o botão para não ocupar toda a largura */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Adiciona transições para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+}
+
+.botaoapp:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #3a9ee4; /* Cor do texto ao passar o mouse */
+    transform: translateY(-2px); /* Eleva ligeiramente o botão */
+}
+
+.botaoapp:active {
+    transform: translateY(0); /* Retorna à posição original quando clicado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Diminui a sombra ao clicar */
+}
+
+/* Estilo da coluna de imagem */
+.image-column {
+    flex: 1;
+    margin-left: 40px; /* Margem à esquerda da imagem */
+    max-width: 1000px; /* Largura máxima da coluna de imagem */
+}
+
+/* Estilo da imagem */
+.image-column img {
+    width: 550px;
+    height: auto;
+    display: block;
+    border-radius: 20px; /* Raio da borda arredondada da imagem */
+}
+
+
+
+
+
+.containers-wrapper {
+    display: flex;
+    justify-content: center; /* Centraliza os containers horizontalmente */
+    align-items: center; /* Centraliza os containers verticalmente */
+    flex-wrap: wrap; /* Permite que os containers se movam para a próxima linha se necessário */
+    gap: 30px; /* Espaçamento entre os containers */
+    margin-bottom: 80px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-resumo {
+    position: relative; /* Necessário para que a posição absoluta da imagem funcione corretamente */
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 80px 40px; /* Padding para o conteúdo do container */
+    width: 300px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: visible; /* Permite que a imagem ultrapasse o container */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+    height: 550px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease; /* Animação suave */
+    position: relative; /* Para o efeito de luz */
+    z-index: 1; /* Certifica-se de que o container esteja acima do efeito de luz */
+
+}
+
+.container-resumo:hover {
+    transform: translateY(-20px); /* Faz o container "pular" para cima */
+    box-shadow: 0 0 20px rgba(105, 105, 105, 0.76); /* Luz amarela atrás */
+}
+
+
+
+.container-image {
+    position: absolute;
+    top: -50px; /* Ajusta para garantir que a imagem ultrapasse o container */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90px; /* Aumenta o tamanho da imagem */
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #ccc; /* Aumenta a espessura da borda */
+}
+
+.container-title {
+    font-size: 24px; /* Aumenta o tamanho da fonte do título */
+    margin-top: 10px; /* Ajusta a margem para acomodar o aumento do tamanho da imagem */
+    margin-bottom: 20px;
+}
+
+.container-text {
+    font-size: 18px; /* Aumenta o tamanho da fonte do texto */
+    color: #666;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   margin-left: 20px;
+}
+
+
+
+    
+
+
+.titulos {
+    text-align: center; /* Centraliza o texto */
+    font-size: 50px; /* Tamanho da fonte para telas maiores */
+    color: white; /* Cor do texto */
+    letter-spacing: 3px; /* Espaçamento entre letras */
+    padding: 20px; /* Espaçamento interno */
+    margin: 0 auto 30px auto; /* Centraliza o bloco e adiciona espaçamento inferior */
+    width: 80%; /* Ocupa 80% da largura da tela */
+    border-radius: 15px; /* Bordas arredondadas */
+    background-color: #3a9ee4; /* Cor de fundo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    transition: transform 0.3s ease; /* Efeito suave ao passar o mouse */
+    max-width: 1000px; /* Limita a largura máxima em dispositivos maiores */
+}
+
+/* Título responsivo em telas menores */
+@media (max-width: 768px) {
+    .titulos {
+        font-size: 28px; /* Reduz o tamanho da fonte em dispositivos móveis */
+        width: 90%; /* Aumenta a largura para 90% em dispositivos menores */
+    }
+}
+
+
+
+
+.titulos:hover {
+    transform: translateY(-5px); /* Efeito de "pulo" leve ao passar o mouse */
+}
+
+.titulos::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent; /* Borda transparente inicial */
+    border-radius: 10px; /* Bordas arredondadas */
+    z-index: -1; /* Fica atrás do conteúdo */
+    transition: all 0.3s ease; /* Animação suave para a borda */
+}
+
+
+.text-column-resumo
+{
+    padding: 20px;
+    text-align: center; /* Centraliza o texto */
+    color: black; /* Cor do texto */
+    margin-bottom: 20px; /* Espaço abaixo do título */
+    letter-spacing: 1px; /* Espaçamento entre as letras */
+    width: 80%; /* Ajusta para 80% da largura da tela */
+    margin: 10px auto; /* Centraliza a coluna */
+    border-radius: 10px; /* Borda arredondada */
+    font-size: 40px; /* Ajusta o tamanho da fonte */
+    border: 2px solid #ccc; /* Borda sólida */
+    flex-direction: column;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    background-color: #fff; /* Fundo branco */
+}
+
+/* Tornar o .text-column-resumo responsivo em telas pequenas */
+@media (max-width: 768px)
+{
+    .text-column-resumo
+    {
+        font-size: 1.5em; /* Tamanho da fonte reduzido em dispositivos móveis */
+        width: 90%; /* Ajusta para ocupar 90% da largura da tela */
+    }
+}
+
+
+
+.textoresumo {
+    font-size: 20px;
+    color: #000000;
+    width: 100%;
+    margin: 0;
+    line-height: 1.6;
+}
+
+
+
+
+
+.blocks-section {
+    position: relative;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 600px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item { 
+    min-width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra padrão */
+    background-color: #ffffff00;
+    margin-bottom: 60px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* Adiciona transição para a sombra */
+}
+
+.carousel-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra em todos os lados no hover */
+}
+
+
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    width: 300px;
+    height: auto;
+}
+
+.text-content {
+    text-align: center;
+    margin-top: 10px;
+  
+}
+
+.text-content h3 {
+    margin: 0 0 10px;
+}
+
+.text-content p {
+    margin: 10px;
+    margin-left: 70px;
+   
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    width: auto;
+    height: auto;
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+
+button:focus {
+    outline: none; /* Remove o contorno padrão ao focar */
+}
+
+button i {
+    line-height: 1; /* Garante que o ícone esteja centralizado verticalmente */
+}
+
+
+.prev {
+    left: 10px;
+ 
+}
+
+.next {
+    right: 10px;
+}
+
+
+
+
+
+
+/* Estilos para a seção FAQ */
+#faq {
+    padding: 40px;
+    margin-bottom: 0px;
+}
+
+.container-faq {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para os itens de FAQ */
+.faq-item {
+    margin-bottom: 20px;
+    background-color: #add9f5;
+    border: 1px solid #d1d1d1;
+    border-radius: 8px;
+    transition: box-shadow 0.3s;
+    width: 750px;
+    justify-content: center; /* Centraliza os containers horizontalmente */
+    align-items: center; /* Centraliza os containers verticalmente */
+    margin-left: 50px;
+    margin-right: 80px;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+/* Efeito hover */
+.faq-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adicionando 'position: relative' para o .faq-question */
+.faq-question {
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #202124;
+    padding: 15px; /* Padding aplicado */
+    margin: 0; /* Sem margem */
+    position: relative; /* Necessário para o posicionamento absoluto da seta */
+}
+
+/* A seta já está com o posicionamento correto, mas vou garantir que a posição esteja certa */
+.dropdown-icon {
+    position: absolute; /* Posiciona o ícone de forma absoluta dentro da faq-question */
+    right: 15px; /* Coloca a seta 15px da borda direita */
+    top: 50%; /* Alinha verticalmente a seta ao meio da pergunta */
+    transform: translateY(-50%); /* Ajusta para garantir que a seta fique centralizada verticalmente */
+}
+
+/* Estilos para a resposta */
+.faq-answer {
+    max-height: 0; /* Inicialmente oculta */
+    overflow: hidden; /* Esconde o conteúdo que excede o max-height */
+    padding: 0 10px; /* Remove o padding vertical */
+    background-color: #f1f3f4;
+    border-radius: 0 0 8px 8px; /* Borda inferior arredondada */
+    font-size: 14px;
+    line-height: 1.5;
+    color: #202124;
+    font-style: italic; /* Define o texto como itálico */
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out; /* Adiciona a transição */
+}
+
+.faq-answer.show {
+    max-height: 200px; /* Ajuste conforme necessário */
+    padding: 10px; /* Restaura o padding ao mostrar a resposta */
+}
+
+
+.faq-answer.active {
+    max-height: 200px; /* ajuste conforme necessário */
+}
+
+/* Estilo para a classe 'show' */
+.show {
+    display: block; /* Mostra a resposta */
+    transition: max-height 0.3s ease-in-out;
+}
+
+
+
+#baixe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.container-baixar {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+}
+
+.baixe h2 {
+    font-size: 30px; /* Tamanho do subtítulo */
+    margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+.baixe p {
+    font-size: 20px; /* Tamanho do parágrafo */
+    margin-bottom: 20px; /* Espaçamento inferior */
+    margin-left: 200px;
+}
+
+/* Estilo do botão */
+.botao-baixar {
+    background: #3a9ee4; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    font-size: 24px; /* Tamanho da fonte do botão */
+    text-align: center;
+    border-radius: 50px; /* Borda arredondada */
+    text-decoration: none;
+    padding: 15px 30px; /* Padding interno do botão */
+    cursor: pointer;
+    display: inline-block; /* Ajusta o botão para não ocupar toda a largura */
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Adiciona transições para hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para profundidade */
+    margin-bottom: 100px;
+}
+
+.botao-baixar:hover {
+    background-color: white; /* Cor de fundo ao passar o mouse */
+    color: #3a9ee4; /* Cor do texto ao passar o mouse */
+    transform: translateY(-2px); /* Eleva ligeiramente o botão */
+}
+
+.botao-baixar:active {
+    transform: translateY(0); /* Retorna à posição original quando clicado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Diminui a sombra ao clicar */
+}
+
+
+
+
+
+#objetivo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Para empilhar os elementos verticalmente */
+    padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.container-objetivo {
+    text-align: center; /* Centraliza o texto dentro do contêiner */
+    transition: transform 0.3s ease; /* Animação suave */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    
+
+}
+
+
+.objetivo p {
+    font-size: 20px; /* Tamanho do parágrafo */
+    margin: 0 20px 20px; /* Espaçamento inferior e lateral */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
+    max-width: 560px; /* Limita a largura dos parágrafos para melhorar a leitura */
+    
+}
+
+
+.footer {
+    background: #1a1f36;
+    color: #fff;
+    width: 100%;
+    bottom: 0;
+    height: auto;
+    margin-top: 20px;
+    padding-bottom: 100px;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+i {
+    margin-right: 10px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section p.infos {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #ccc; /* Cor mais clara para o texto das informações */
+    margin-bottom: 10px;
+    text-align: center; /* Centraliza o texto */
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    font-style: normal;
+    font-weight: normal; 
+    text-align: center; /* Centraliza o título */
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 15px;
+    line-height: 1.6;
+    text-align: center; /* Centraliza os parágrafos */
+}
+
+.footer-section ul {
+    display: flex; /* Usar flexbox para alinhar os itens em linha */
+    padding: 0;
+    justify-content: center; /* Centraliza os links horizontalmente */
+}
+
+.footer-section ul li {
+    margin-right: 20px; /* Adiciona espaço entre os links */
+}
+
+/* Remove a margem do último link */
+.footer-section ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-section ul li {
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    color: #ddd;
+}
+
+/* Estilo da parte inferior do footer */
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+}
+
+
+
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    width: 15px;
+    
+}
+
+.scroll-to-top:hover {
+    background-color: #3a9ee4;
+}
+
+.scroll-to-top:active {
+    transform: scale(0.95);
+}
+
+/* Ajuste para títulos em telas pequenas */
+@media (max-width: 768px) {
+    .faq-item, .titulo {
+        width: 90%; /* Deixa o título menor que a largura total da tela */
+        margin: 0 auto; /* Centraliza horizontalmente */
+        padding: 10px; /* Adiciona espaçamento interno */
+    }
+    
+    .faq-question {
+        font-size: 16px; /* Diminui o tamanho da fonte em telas menores */
+        padding: 10px; /* Ajusta o padding */
+    }
+    
+    .faq-answer {
+        font-size: 14px; /* Reduz o tamanho da fonte das respostas */
+    }
+}
+
+/* Ajuste para a seção "baixe" em telas pequenas */
+@media (max-width: 768px) {
+    #baixe {
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .baixe h2 {
+        font-size: 24px; /* Ajusta o tamanho do título */
+        margin-bottom: 10px;
+    }
+    
+    .baixe p {
+        font-size: 16px; /* Diminui o tamanho da fonte */
+        margin: 0 0 20px 0; /* Remove as margens laterais e ajusta as margens inferiores */
+    }
+    
+    .botao-baixar {
+        width: 80%; /* Ajusta o tamanho do botão para ficar responsivo */
+        margin: 0 auto 30px auto; /* Centraliza o botão e ajusta a margem inferior */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
