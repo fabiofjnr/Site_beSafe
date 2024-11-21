@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>beSafe</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="icon" href="img/logobesafeicon.ico">
+        <link rel="stylesheet"
+            href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+            integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+            crossorigin="anonymous">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+            integrity="sha512-dT50c35Xxkg1z2X3HujFt0f8m/NrMtGdPbL9/63fHsMwI95qQnlM5ucuFShO3S+BozRwb8ccZbD2VTxVXv/6vg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+            rel="stylesheet">
+    </head>
+    <body>
+
+        <header class="site-header">
+            <div class="containerheader">
+                <a href="#" class="minilogolink">
+                    <img src="img/logobrancosemescrita.PNG" alt="beSafe Logo" class="minilogo">
+                </a>
+                <a href="#home" class="botaohome">beSafe</a>
+                <button class="menu-toggle" aria-label="Abrir Menu">
+                    &#9776; 
+                </button>
+                <nav class="links-header">
+                    <ul>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#telas">Telas</a></li>
+                        <li><a href="#objetivo">O que Pretendemos</a></li>
+                        <li><a href="#faq">Perguntas Frequentes</a></li>
+                        <li><a href="#baixe">Baixe o aplicativo</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const linksHeader = document.querySelector('.links-header');
+    
+            menuToggle.addEventListener('click', function () {
+                linksHeader.classList.toggle('show');
+            });
+        });
+    </script>
+
+        <main class="main-content">
+
+            <section id="home" class="home-section">
+                <div class="container">
+                    <div class="text-image-row">
+                        <div class="text-column">
+                            <h2>Bem-vindo(a) ao beSafe!</h2>
+                            <p>Descubra o beSafe, a rede social que transforma
+                                desabafos em apoio e conexão! Compartilhe suas
+                                experiências de forma anônima ou identificada em
+                                um espaço seguro e acolhedor. Junte-se a nós e
+                                inicie sua jornada de autoconhecimento e
+                                empatia!</p>
+
+                        </div>
+                        <div class="image-column">
+                            <img src="img/atualizadas/telassemfundo.png"
+                                alt="Imagem de Divulgação">
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="sobre" class="resumo">
+                <div class="container">
+                    <h1 class="titulos">Sobre o aplicativo</h1>
+                </div>
+                <div class="containers-wrapper">
+                    <div class="container-resumo">
+                        <img src="img/coracao.PNG" alt="Imagem 1"
+                            class="container-image">
+                        <h2 class="container-title">Um Refúgio para Seus
+                            Sentimentos</h2>
+                        <p class="container-text">O beSafe foi criado com o
+                            objetivo de ajudar e servir como uma rede de apoio
+                            para pessoas que têm dificuldade de falar sobre seus
+                            sentimentos, mas precisam desabafar e expressar o
+                            que sentem.</p>
+                    </div>
+                    <div class="container-resumo">
+                        <img src="img/cadeado.png" alt="Imagem 2"
+                            class="container-image">
+                        <h2 class="container-title">Desabafe com Confiança</h2>
+                        <p class="container-text">No beSafe, você pode desabafar
+                            de forma anônima, sem medo de ser julgado. Você pode
+                            criar posts e enquetes, e ver posts de outras
+                            pessoas com as quais você pode se identificar.</p>
+                    </div>
+                    <div class="container-resumo">
+                        <img src="img/cerebro.PNG" alt="Imagem 3"
+                            class="container-image">
+                        <h2 class="container-title">Seu Suporte para Saúde
+                            Mental</h2>
+                        <p class="container-text">O beSafe não apenas serve como
+                            um meio para desabafar, mas também como uma
+                            ferramenta valiosa para promoção da saúde mental,
+                            oferecendo suporte emocional, comunidade e acesso a
+                            recursos profissionais quando necessário.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="telas" class="blocks-section">
+                <h1 class="titulos">Telas do aplicativo</h1>
+                <div class="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>Cadastro</h3>
+                                <p>Aqui você realiza o cadastro no beSafe
+                                    colocando um nome, um email e uma senha.
+                                    Aqui você pode decidir se quer ou não ser
+                                    anônimo, escolhendo entre criar um nome de
+                                    usuário ou colocar sua real identidade</p>
+                                <img src="img/atualizadas/cadastro.jpg"
+                                    alt="Bloco 1">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>Novo post</h3>
+                                <p>Nesta tela, você pode criar um novo desabafo
+                                    ou enquete. Você pode escolher se deseja ser
+                                    anônimo ou identificado, além de adicionar
+                                    texto e imagens </p>
+                                <img src="img/atualizadas/novopost.jpg"
+                                    alt="Bloco 2">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>Salvos</h3>
+                                <p>A tela "Salvos" permite que você acesse
+                                    rapidamente os posts e enquetes que você
+                                    salvou para revisitar mais tarde. É uma
+                                    forma prática de guardar conteúdos que te
+                                    interessaram ou que você gostaria de
+                                    refletir.</p>
+                                <img src="img/atualizadas/salvos.jpg"
+                                    alt="Bloco 3">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>SOS</h3>
+                                <p>A tela "SOS" é um recurso essencial do
+                                    beSafe. Aqui, você encontrará dois botões:
+                                    um para iniciar uma conversa com um
+                                    profissional capacitado e outro que conecta
+                                    você ao CVV (Centro de Valorização da Vida).
+                                    Essa tela reforça a importância de buscar
+                                    apoio emocional.</p>
+                                <img src="img/atualizadas/sos.jpg"
+                                    alt="Bloco 4">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>Posts</h3>
+                                <p>Na tela de "Posts", você pode visualizar as
+                                    suas publicações. Aqui você pode também
+                                    visualizar a quantidade de curtidas e
+                                    comentários seus posts tiveram</p>
+                                <img src="img/atualizadas/posts.jpg"
+                                    alt="Bloco 5">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>Enquetes</h3>
+                                <p>A tela de "Enquetes" permite que você crie e
+                                    participe de enquetes sobre diferentes
+                                    temas. Essa funcionalidade é útil para
+                                    coletar opiniões ou obter feedback sobre
+                                    situações específicas, além de fomentar a
+                                    interação entre os usuários. </p>
+                                <img src="img/atualizadas/enquetes.jpg"
+                                    alt="Bloco 6">
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="text-content">
+                                <h3>Perfil</h3>
+                                <p>Na tela de "Perfil", você pode visualizar e
+                                    editar suas informações pessoais. Aqui, você
+                                    pode ver suas publicações, enquetes, e as
+                                    respostas que recebeu. Também é possível
+                                    ajustar seu nome, username, foto de perfil e
+                                    escrever uma biografia sobre você,
+                                    proporcionando uma apresentação mais
+                                    completa aos outros usuários.</p>
+                                <img src="img/atualizadas/perfil.jpg"
+                                    alt="Bloco 7">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="prev" onclick="moveSlide(-1)"
+                        aria-label="Slide anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+
+                    <button class="next" onclick="moveSlide(1)"
+                        aria-label="Próximo slide">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </section>
+
+            <section id="objetivo" class="objetivo">
+                <h1 class="titulos">O que pretendemos</h1>
+                <div class="container-objetivo">
+                    <div class="objetivo">
+                        <p>A nossa missão como criadores do beSafe é
+                            proporcionar um espaço seguro e acolhedor para a
+                            expressão emocional, promovendo o apoio mútuo e a
+                            saúde mental.</p>
+                        <p>O objetivo é conectar pessoas que precisam desabafar,
+                            oferecer recursos de ajuda e conscientizar sobre a
+                            importância do bem-estar emocional</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="faq" class="faq-section">
+                <h1 class="titulos">Perguntas Frequentes</h1>
+                <div class="container-faq">
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            1. O que é o beSafe?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">O beSafe é uma rede social de
+                            desabafos onde você pode criar posts e enquetes
+                            sobre situações da sua vida, podendo optar por ser
+                            anônimo ou não, de acordo com seu perfil. É um
+                            espaço para apoio emocional e troca de
+                            experiências.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            2. Como posso criar meu perfil no beSafe?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">Para criar seu perfil, baixe o
+                            aplicativo, preencha suas informações, escolha um
+                            nome, um username, uma foto de perfil (se desejar) e
+                            escreva uma biografia. Você pode optar por
+                            permanecer anônimo escolhendo um username avulso e
+                            não colocando foto.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            3. O que significa ser anônimo no beSafe?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">Ser anônimo significa que você
+                            pode compartilhar suas experiências sem revelar sua
+                            identidade. Se você optar por não usar foto e
+                            escolher um username genérico, suas publicações e
+                            interações permanecerão anônimas para outros
+                            usuários.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            4. O que posso fazer na tela inicial?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">Na tela inicial, você pode ver
+                            as publicações de outras pessoas, curtir, comentar e
+                            criar suas próprias postagens clicando no símbolo
+                            “+” no canto inferior direito.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            5. Como funcionam as enquetes?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">Você pode criar enquetes para
+                            coletar opiniões sobre diferentes assuntos. Os
+                            usuários podem votar e comentar, ajudando a gerar
+                            discussões e apoio.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            6. O que é a página de SOS?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">A página de SOS oferece suporte
+                            emocional. Ela contém dois botões: um para conversar
+                            com profissionais treinados em apoio emocional e
+                            outro que leva você ao CVV (Centro de Valorização da
+                            Vida), onde é possível fazer uma ligação para ajuda
+                            imediata.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            7. Posso salvar posts e enquetes?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">Sim! Você pode salvar posts e
+                            enquetes que achar interessantes diretamente na sua
+                            tela de perfil para revisitar depois.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            8. Como vejo as interações nos meus posts?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">Na sua tela de perfil, você pode
+                            visualizar todas as respostas aos seus posts, além
+                            de acessar os posts e enquetes que você
+                            curtiu.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            9. O que devo fazer se eu ou alguém que conheço
+                            estiver em crise emocional?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">É essencial buscar ajuda
+                            profissional. Utilize o botão de SOS no aplicativo
+                            para entrar em contato com um profissional ou ligar
+                            para o CVV pelo botão 188.</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question" onclick="toggleAnswer(this)">
+                            10. O que diferencia o beSafe de outras redes
+                            sociais?
+                            <i class="fa-solid fa-caret-down dropdown-icon"></i>
+                        </div>
+                        <div class="faq-answer">O beSafe é focado em apoio
+                            emocional, oferecendo um espaço seguro para
+                            desabafos e troca de experiências. A possibilidade
+                            de anonimato e a presença de profissionais para
+                            ajudar em situações delicadas tornam o beSafe um
+                            ambiente único e acolhedor.</div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="baixe" class="baixe-section">
+                <h1 class="titulos">Baixe agora</h1>
+                <div class="container-baixar">
+                    <div class="baixe">
+                        <h2>Pronto para melhorar seu bem-estar emocional?</h2>
+                        <p>Desabafe, conecte-se e cuide da sua mente com
+                            beSafe!</p>
+                        <a class="botao-baixar"
+                            href="https://play.google.com/store/apps/details?id=com.instagram.android&pcampaignid=web_share">Baixar
+                            Agora</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <a href="#" class="scroll-to-top"><i class="fas fa-arrow-up"></i></a>
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section links">
+                    <h4>Contato para feedback</h4>
+                    <ul>
+                        <li><a
+                                href="mailto:beSafeapp1@gmail.com">beSafeapp1@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                &copy; 2024 beSafe. Todos os direitos reservados.
+            </div>
+        </footer>
+
+        <script src="./script/scriptanimacao.js"></script>
+        <script src="./script/scriptcarrossel.js"></script>
+        <script src="./script/scriptfaq.js"></script>
+    </body>
+</html>
