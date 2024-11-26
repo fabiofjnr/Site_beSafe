@@ -628,7 +628,7 @@ button i {
     margin-right: 80px;
     margin-top: 10px;
     margin-bottom: 0;
-    width: 100%;
+    width: 90%;
     max-width: 750px;
     margin: 10px auto;
     box-sizing: border-box;
@@ -644,16 +644,16 @@ button i {
     font-weight: 500;
     cursor: pointer;
     color: #202124;
-    padding-right: 30px;
     padding: 15px;
     margin: 0;
     position: relative;
-    width: calc(100% - 30px); 
+    width: 100%;
+    box-sizing: border-box;
+    padding-right: 50px;
 }
 
 .dropdown-icon {
     position: absolute;
-    right: 0;
     right: 15px;
     top: 50%;
     transform: translateY(-50%);
@@ -695,25 +695,28 @@ button i {
     transition: max-height 0.3s ease-in-out;
 }
 
-@media (max-width: 768px) {
-    .container-faq {
-        max-width: 100%;
-        margin: 0 auto;
+@media screen and (max-width: 768px) {
+    .faq-question {
+        font-size: 17px;
+        padding-right: 40px;
     }
 
+    .dropdown-icon {
+        right: 10px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .container-faq {
-        max-width: 100%;
-        margin: 0 auto;
+    .faq-question {
+        font-size: 16px;
+        padding-right: 40px;
+        width: 90%;
     }
 
-    .containers-wrapper {
-        margin-top: 20%;
+    .dropdown-icon {
+        right: -20px;
     }
 }
-
 
 #baixe {
     display: flex;
