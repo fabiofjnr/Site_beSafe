@@ -255,7 +255,7 @@ p {
         margin-bottom: 30px;
         text-align: center;
     }
-    
+
 }
 
 img {
@@ -345,6 +345,25 @@ img {
     text-align: center;
     align-items: center;
     justify-content: center;
+    margin-top: 6.5%;
+}
+
+@media (max-width: 1024px) {
+    .containers-wrapper {
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 768px) {
+    .containers-wrapper {
+        margin-top: 12%;
+    }
+}
+
+@media (max-width: 480px) {
+    .containers-wrapper {
+        margin-top: 15%;
+    }
 }
 
 .container-resumo {
@@ -408,7 +427,7 @@ img {
     padding: 20px;
     margin: 0 auto 30px auto;
     width: 80%;
-    max-width: 100%;
+    max-width: 80%;
     box-sizing: border-box;
     border-radius: 15px;
     background-color: #3a9ee4;
@@ -423,6 +442,10 @@ img {
         width: 80%;
         max-width: 80%;
         min-width: 80%;
+    }
+
+    .containers-wrapper {
+        margin-top: 20%;
     }
 }
 
@@ -579,12 +602,17 @@ button i {
 
 #faq {
     padding: 40px;
-    margin-bottom: 0px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .container-faq {
     max-width: 800px;
     margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 
@@ -594,13 +622,16 @@ button i {
     border: 1px solid #d1d1d1;
     border-radius: 8px;
     transition: box-shadow 0.3s;
-    width: 750px;
     justify-content: center;
     align-items: center;
     margin-left: 50px;
     margin-right: 80px;
     margin-top: 10px;
     margin-bottom: 0;
+    width: 100%;
+    max-width: 750px;
+    margin: 10px auto;
+    box-sizing: border-box;
 }
 
 .faq-item:hover {
@@ -617,12 +648,14 @@ button i {
     padding: 15px;
     margin: 0;
     position: relative;
-    width: 90%;
+    width: calc(100% - 30px); 
 }
 
 .dropdown-icon {
     position: absolute;
     right: 0;
+    right: 15px;
+    top: 50%;
     transform: translateY(-50%);
     transition: transform 0.3s ease;
 }
@@ -661,6 +694,26 @@ button i {
     display: block;
     transition: max-height 0.3s ease-in-out;
 }
+
+@media (max-width: 768px) {
+    .container-faq {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .container-faq {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .containers-wrapper {
+        margin-top: 20%;
+    }
+}
+
 
 #baixe {
     display: flex;
