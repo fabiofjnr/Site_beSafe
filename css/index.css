@@ -248,6 +248,14 @@ p {
         text-align: center;
         justify-content: center;
     }
+
+    .text-column p {
+        font-size: 20px;
+        line-height: 1.8;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    
 }
 
 img {
@@ -258,6 +266,7 @@ img {
 
 @media (max-width: 768px) {
     .text-image-row {
+        text-align: center;
         flex-direction: column;
     }
 
@@ -399,18 +408,21 @@ img {
     padding: 20px;
     margin: 0 auto 30px auto;
     width: 80%;
+    max-width: 100%;
+    box-sizing: border-box;
     border-radius: 15px;
     background-color: #3a9ee4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    max-width: 1000px;
 }
 
 
 @media (max-width: 768px) {
     .titulos {
         font-size: 28px;
-        width: 90%;
+        width: 80%;
+        max-width: 80%;
+        min-width: 80%;
     }
 }
 
@@ -453,6 +465,8 @@ img {
     .text-column-resumo {
         font-size: 1.5em;
         width: 90%;
+        min-width: 90%;
+        max-width: 90%;
     }
 }
 
@@ -691,8 +705,19 @@ button i {
     transition: transform 0.3s ease;
     margin-top: 40px;
     margin-bottom: 40px;
+    align-items: center;
+    justify-content: center;
 
 
+}
+
+.objetivo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
 }
 
 .objetivo p {
@@ -706,6 +731,17 @@ button i {
 
 @media (max-width: 768px) {
 
+    .objetivo p {
+        font-size: 20px;
+        margin: 0 35px 30px;
+        line-height: 1.5;
+        max-width: 560px;
+        text-align: center;
+
+    }
+}
+
+@media screen and (max-width: 480px) {
     .objetivo p {
         font-size: 20px;
         margin: 0 35px 30px;
