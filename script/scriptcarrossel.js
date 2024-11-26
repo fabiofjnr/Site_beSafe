@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.prev').addEventListener('click', () => moveSlide(-1));
     document.querySelector('.next').addEventListener('click', () => moveSlide(1));
 
-    
-    setInterval(() => moveSlide(1), 10000); 
+
+    setInterval(() => moveSlide(1), 10000);
 });
 
 
